@@ -12,10 +12,29 @@ struct ContentView: View {
     var body: some View {
         VStack {
             Text("\(count)")
-                .padding()
-            Button("+") {
-                count += 1
+                .font(.system(size: 60))
+            
+            HStack {
+                Button("+") {
+                    count += 1
+                }
+                .font(.system(size: 100))
+                .frame(width: 100, height: 100)
+                .background(.red)
+                .foregroundStyle(.white)
+                            
+                Spacer().frame(width: 40)
+                
+                Button("-") {
+                    count -= 1
+                }
+                .font(.system(size: 100))
+                .frame(width: 100, height: 100)
+                .background(.blue)
+                .foregroundStyle(.white)
+                //.padding()
             }
+            .padding()
         }
     }
 }
